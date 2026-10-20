@@ -1,0 +1,10 @@
+{
+  "base_url": "https://YOUR-STAGING-PROJECT.supabase.co",
+  "synthetic_only": true,
+  "table": "tenant_fence_fixtures",
+  "api_key_env": "SUPABASE_PUBLIC_KEY",
+  "accounts": [
+    {"token_env": "TENANT_A_ACCESS_TOKEN", "record_id": "tenant-fence-a", "marker": "tenant-fence-marker-a"},
+    {"token_env": "TENANT_B_ACCESS_TOKEN", "record_id": "tenant-fence-b", "marker": "tenant-fence-marker-b"}
+  ]
+}

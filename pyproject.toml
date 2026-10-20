@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tenant-fence"
+version = "0.1.0"
+description = "Two synthetic accounts. Four real HTTP reads. Catch tenant-isolation regressions."
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [{name = "Kamesh Jindal"}]
+dependencies = []
+keywords = ["supabase", "rls", "multi-tenant", "testing", "security"]
+
+[project.scripts]
+tenant-fence = "tenant_fence.__main__:main"
+
+[tool.setuptools.packages.find]
+include = ["tenant_fence*"]
