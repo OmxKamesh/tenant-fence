@@ -107,3 +107,17 @@ For SQL-level RLS tests, consider [Supabase's testing tools](https://supabase.co
 ## Contributing
 
 Keep the demo runnable without network access and add a failing regression test before a fix. Good next adapters include explicit write-isolation fixtures with cleanup and richer membership models; these are **not implemented yet**. Report vulnerabilities privately using the process in [SECURITY.md](SECURITY.md). See [LICENSE](LICENSE) for MIT terms.
+
+## Use it as a Claude Code skill
+
+This repository is also a Claude Code skill (see [SKILL.md](SKILL.md)).
+
+```sh
+git clone https://github.com/OmxKamesh/supabase-rls-tester ~/.claude/skills/supabase-rls-tester
+```
+
+Then start Claude Code and run `/supabase-rls-tester demo`. The skill is user-invoked only, so Claude will not run it on its own. It calls the same `python -m tenant_fence` CLI described above, with the same limits.
+
+---
+
+Built by Kamesh Jindal at [OMX Digital](https://omxdigital.ai). Part of the [OMX Claude Skills toolkit](https://github.com/OmxKamesh/claude-code-skills). Need this set up for your business? [kamesh@omxdigital.ai](mailto:kamesh@omxdigital.ai)
